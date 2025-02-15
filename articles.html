@@ -7,34 +7,16 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body onload="fetchArticles()">
     <div class="wrap">
-        <div class="logo">mixmag.info</div>
+        <a href="/" class="logo" style="text-decoration: none;">mixmag.info</a>
         <div class="nav-items">
             <a href="#">Articles</a>
         </div>
-        <div class="article-list" id="app"></div>
+        <div class="article-list" id="articles"></div>
     </div>
 
-    <script>
-        async function fetchArticles() {
-            const response = await fetch('http://localhost:3000/api/articles');
-            const articles = await response.json();
-            const sorted = articles.sort((a, b) => b.pub_date - a.pub_date);
-
-            document.getElementById('app').innerHTML = sorted.map(article => {
-                const date = new Date(article.pub_date * 1000);
-                return `
-                    <div class="article">
-                        <a href="article.html?id=${article.id}">${article.title}</a>
-                        <div class="date">${date.toLocaleDateString()}</div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        fetchArticles();
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
