@@ -7,11 +7,12 @@ async function fetchArticles() {
     document.getElementById('app').innerHTML = sorted.map(article => {
         const date = new Date(article.pub_date * 1000);
         return `
-           <div class="article">
-               <div class="date">${date.toLocaleDateString()}</div>
-               <a href="/mixmag/article/${article.pub_date}">${article.title}</a>
-           </div>
-       `;
+            <div class="article">
+                <a href="/mixmag/article/${article.id}">${article.title}</a>
+                <div class="date">${date.toLocaleDateString()}</div>
+            </div>
+        `;
     }).join('');
 }
+
 fetchArticles();

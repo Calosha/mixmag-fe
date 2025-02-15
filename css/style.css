@@ -1,21 +1,114 @@
+css * {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    max-width: 800px;
-    margin: 20px auto;
-    font-family: system-ui;
-    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: #3F3F3F;
+    text-align: center;
+    background: #B9B9B9;
 }
 
-.article {
+.wrap {
+    width: 930px;
+    margin: auto;
+    padding: 0 30px;
+    text-align: left;
+    font-size: 14px;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #e5e5e5;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
 }
 
-.article a {
+.nav-items a {
     text-decoration: none;
     color: #333;
+    padding: 5px 10px;
+}
+
+.logo {
+    color: #b41529;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* .article {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.article a {
+    color: #b41529;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.article a:hover {
+    text-decoration: underline;
 }
 
 .date {
+    color: #999;
+    font-size: 14px;
+}
+
+/* .article-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b41529;
+    margin-bottom: 20px;
+} */
+
+.article-announcement {
+    font-size: 16px;
     color: #666;
-    font-size: 0.9em;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.article-content {
+    line-height: 1.6;
+}
+
+.article-meta {
+    margin-top: 20px;
+    color: #999;
+    font-size: 14px;
+}
+
+.article {
+    margin: 0;
+    /* Remove top margin */
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b41529;
+    margin: 0 0 20px 0;
+    /* Reset top margin, keep bottom margin */
+    text-align: center;
+}
+
+.motto {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b41529;
+    margin: 20px 0;
+    text-align: center;
+    font-style: italic;
 }
